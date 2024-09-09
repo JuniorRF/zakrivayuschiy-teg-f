@@ -1,37 +1,132 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ theme-dark — класс тёмной темы
-✦ theme-light — класс светлой темы
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
-
 .page {
   min-inline-size: 375px;
   min-block-size: 100dvb;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   font-family: var(--font-family-base);
   font-variation-settings: 'wght' 400;
-  background: var(--color-bg);
+  background: var(--gradient);
   background-size: cover;
+  color: var(--color-text);
 }
 
 .header {
   font-family: PressStart2P;
+  background-color: var(--background);
   border: #000 solid 2px;
-  margin-block-start: 100px;
+  /* margin-block-start: 100px;
+  margin-block-end: 100px; */
+  margin-block: 6.3em;
   text-align: center;
 }
 
 .title {
-  font-size: clamp(3.0625rem, 0rem + 100vw, 4.0625rem);
+  margin-block-start: 2.1em;
+  margin-block-end: 20px;
+  font-size: clamp(3.0625rem, 0rem + 14.2857vw, 4.0625rem);
 }
+
+.title-description {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  letter-spacing: 1px;
+}
+
+/* .header__theme-menu {
+} */
+
+.theme-menu__list {
+  margin-block: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: .7em;
+}
+
+/* .theme-menu__item {
+} */
+
+.theme-menu__button {
+  background-color: transparent;
+  border: none;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.theme-menu__button:disabled {
+  opacity: 1;
+}
+
+.theme-menu__button:disabled::before {
+  font-family: inherit;
+  content: '\25b6';
+  opacity: 1;
+  position: relative;
+  left: 5px;
+}
+/* content: '25ba' 25b6 ;case ▶ 2023  aalt */
+
+
+section {
+  background-color: var(--background);
+  border: #000 solid 2px;
+  margin-block-end: 52px;
+}
+
+h3 {
+  font-size: 18.2px;
+  padding: 5px 0 3px 10px;
+}
+
+/* h3 span {
+} */
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  gap: 27px;
+}
+
+/* img {
+} */
+
+p {
+  padding: 0 25px;
+  font-size: 19px;
+}
+
+article button {
+  width: 169px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  align-self: flex-end;
+  padding-inline-end: 20px;
+  
+
+}
+
+.like-icon {
+  /* — для svg-иконки анимированного сердца */
+
+}
+
+.card__like-button {
+ /* — для кнопки Like рядом с иконкой */
+}
+
+.card__icon-button{
+   /* — для кнопки, оборачивающей иконку */
+  }
+
+.is-liked {
+  /* — для обозначения состояния лайкнутой иконки в виде сердца */
+}
+
+.button__text {
+  /* — для обозначения текстового элемента внутри кнопки */
+}
+
