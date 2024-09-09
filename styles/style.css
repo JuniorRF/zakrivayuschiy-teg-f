@@ -15,6 +15,23 @@
 */
 
 .page {
-  min-inline-size: 320px;
+  min-inline-size: 375px;
   min-block-size: 100dvb;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  font-variation-settings: 'wght' 400;
+  background: var(--color-bg);
+  background-size: cover;
+}
+
+.header {
+  font-family: PressStart2P;
+  border: #000 solid 2px;
+  margin-block-start: 100px;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(3.0625rem, 0rem + 100vw, 4.0625rem);
 }
