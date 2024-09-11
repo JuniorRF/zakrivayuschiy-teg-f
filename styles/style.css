@@ -1,6 +1,8 @@
 .page {
-  min-inline-size: 375px;
-  min-block-size: 100dvb;
+  /* min-inline-size: 375px; */
+
+  max-inline-size: 700px;
+  /* min-block-size: 100dvb; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -47,14 +49,17 @@
   font-size: 14px;
 }
 
-/* .theme-menu__button:disabled {
-  opacity: 1;
-} */
+.theme-menu__button:hover {
+  opacity: .6;
+}
+
+.theme-menu__button:disabled {
+  opacity: .6;
+}
 
 .theme-menu__button:disabled::before {
   font-family: inherit;
   content: '\25b6';
-  opacity: 1;
   position: relative;
   left: 5px;
 }
@@ -77,7 +82,7 @@ h3 {
 }
 
 img {
-  width: 100%;
+  max-inline-size: 100%;
   border-top: var(--color-text) solid 2px;
   border-bottom: var(--color-text) solid 2px;
 }
@@ -87,13 +92,13 @@ img {
   right: 25px;
   top: 25px;
   font-family: var(--font-family-alternative);
+  opacity: .5;
+  mix-blend-mode: hard-light;
   text-shadow:
     1px 1px 0 var(--background),
     -1px -1px 0 var(--background),
     -1px 1px 0 var(--background),
-    1px -1px 0 var(--background),
-     0 0 1px var(--background);
-  mix-blend-mode: hard-light;
+    1px -1px 0 var(--background);
 }
 
 .card-data {
