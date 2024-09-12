@@ -63,6 +63,8 @@
   fill: none;}
 
 .sparks {
+  fill: var(--filling);
+  opacity: 0;
 }
 
 .heart {
