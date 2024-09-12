@@ -34,8 +34,14 @@ a {
 button,
 input {
   color: currentColor;
-  font-family: inherit;
+  font-family: var(--font-family-alternative);
   font-size: inherit;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+buttons:focus {
+  outline: none;
 }
 
 ul,
