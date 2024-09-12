@@ -9,7 +9,6 @@
 }
 
 body {
-  /* min-inline-size: 375px; */
   margin: 0 auto;
 }
 
@@ -35,7 +34,6 @@ button,
 input {
   color: currentColor;
   font-family: var(--font-family-alternative);
-  font-size: inherit;
   cursor: pointer;
   font-size: 14px;
 }

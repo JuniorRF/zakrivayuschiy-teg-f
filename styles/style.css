@@ -131,10 +131,10 @@ img {
 
 .buttons {
   display: flex;
-  align-items: center;
-  gap: 4px;
+  /* align-items: center; */
+  /* gap: 1px; */
   align-self: flex-end;
-  width: min-content;
+  /* width: min-content; */
 }
 
 
@@ -144,23 +144,22 @@ img {
 
 .card__like-button {
  /* — для кнопки Like рядом с иконкой */
-  position: relative;
   width: 130px;
   height: 38px;
   border: 2px solid var(--color-text);
   background-color: var(--background);
-  transition: box-shadow .3s ease;
-
-  &:focus {
-    outline: none;
-    box-shadow: 2px 2px 0 0 currentColor;
-  }
 }
 
 .card__icon-button{
    /* — для кнопки, оборачивающей иконку */
   border: none;
   background: transparent;
+  transition: border 0.3s ease;
+  
+    &:focus-visible {
+      outline: none;
+      border: 2px solid var(--color-text);
+    }
   }
 
 /* .is-liked {
@@ -180,13 +179,8 @@ img {
   width: 335px;
   height: 55px;
   margin-block-end: 102px;
-  background-color: var(--background);
+  /* background-color: var(--background); */
   border: 2px solid var(--color-text);
-  transition: box-shadow .3s ease;
-  &:focus {
-    outline: none;
-    box-shadow: 2px 2px 0 0 currentColor;
-  }
 }
 
 /* .floppy {
