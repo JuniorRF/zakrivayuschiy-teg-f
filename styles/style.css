@@ -132,7 +132,7 @@ img {
 .buttons {
   display: flex;
   /* align-items: center; */
-  /* gap: 1px; */
+  gap: 6px;
   align-self: flex-end;
   /* width: min-content; */
 }
@@ -149,18 +149,6 @@ img {
   border: 2px solid var(--color-text);
   background-color: var(--background);
 }
-
-.card__icon-button{
-   /* — для кнопки, оборачивающей иконку */
-  border: none;
-  background: transparent;
-  transition: border 0.3s ease;
-  
-    &:focus-visible {
-      outline: none;
-      border: 2px solid var(--color-text);
-    }
-  }
 
 /* .is-liked {
   — для обозначения состояния лайкнутой иконки в виде сердца
@@ -179,7 +167,7 @@ img {
   width: 335px;
   height: 55px;
   margin-block-end: 102px;
-  /* background-color: var(--background); */
+  background-color: var(--background);
   border: 2px solid var(--color-text);
 }
 

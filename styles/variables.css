@@ -3,10 +3,11 @@
     --font-family-alternative: 'PressStart2P', sans-serif;
     --font-weight-card-name: 700;
     --font-weight-card-text: 400;
-    --accent-color: #FFF;
+    --strip: #FFF;
     --color-text: #000;
     --background: #FFF;
     --filling: red;
+    --accent-color: rgb(0 0 0);
 
     
     --gradient:
