@@ -1,8 +1,6 @@
 .page {
-  /* min-inline-size: 375px; */
-
   max-inline-size: 700px;
-  /* min-block-size: 100dvb; */
+  min-block-size: 668px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -131,32 +129,45 @@ img {
 
 .buttons {
   display: flex;
-  /* align-items: center; */
   gap: 6px;
   align-self: flex-end;
-  /* width: min-content; */
-}
-
-
-.like-icon {
-  /* — для svg-иконки анимированного сердца */
 }
 
 .card__like-button {
- /* — для кнопки Like рядом с иконкой */
   width: 130px;
   height: 38px;
   border: 2px solid var(--color-text);
   background-color: var(--background);
 }
 
-/* .is-liked {
-  — для обозначения состояния лайкнутой иконки в виде сердца
-} */
-
-/* .button__text {
-  — для обозначения текстового элемента внутри кнопки
-} */
+.button-animation {
+  display: block;
+  position: relative;
+  transition: box-shadow .3s ease;
+  &:focus {
+    outline: none;
+  }
+  &:focus-visible {
+    box-shadow: 2px 2px 0 0 currentColor;
+  }
+  &::before{
+    content: '';
+    display: block;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--strip);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s ease-in-out;
+    mix-blend-mode: difference;
+  }
+  &:hover::before {
+    transform: scaleX(1);
+  }
+}
 
 .save-button {
   display: flex;
@@ -170,9 +181,6 @@ img {
   background-color: var(--background);
   border: 2px solid var(--color-text);
 }
-
-/* .floppy {
-} */
 
 @media (width <= 375px) {
   .page {
@@ -194,4 +202,59 @@ img {
     height: 84px;
     gap: 12px;
   }
+}
+
+dialog {
+  /* position: relative; */
+  /* display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center; */
+  font-family: var(--font-family-alternative);
+  font-variation-settings: 'wght' 400;
+  font-size: 14px;
+  /* margin: auto; */
+  color: var(--color-text);
+  background: var(--background);
+  border: 2px solid var(--color-text);
+  height: 191px;
+  width: 353px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.dialog-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  /* height: 100%; */
+}
+
+dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.floppy {
+  width: 21px;
+  height: 21px;
+}
+
+.dialog-floppy {
+  width: 39px;
+  height: 39px;
+}
+
+.save-text {
+  display: flex;
+  gap: 20px;
+}
+
+.close {
+  background: var(--background);
+  border: 2px solid var(--color-text);
+  width: 293px;
+  height: 38px;
+  display: block;
 }
