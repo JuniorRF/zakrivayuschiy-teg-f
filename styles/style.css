@@ -14,7 +14,7 @@
 .header {
   font-family: PressStart2P;
   background-color: var(--background);
-  border: #000 solid 2px;
+  border: var(--color-text) solid 2px;
   margin-block: 6.3em;
   text-align: center;
 }
