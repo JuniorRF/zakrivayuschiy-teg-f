@@ -12,7 +12,7 @@
 }
 
 .header {
-  font-family: PressStart2P;
+  font-family: var(--font-family-alternative);
   background-color: var(--background);
   border: var(--color-text) solid 2px;
   margin-block: 6.3em;
@@ -20,14 +20,16 @@
 }
 
 .title {
-  margin-block-start: 2.1em;
+  display: block;
+  padding-block-start: 2.1em;
   margin-block-end: 20px;
   font-size: clamp(3.0625rem, 0rem + 14.2857vw, 4.0625rem);
 }
 
 .title-description {
   text-transform: uppercase;
-  font-size: clamp(0.875rem, -1.6094rem + 10.7143vw, 1.4375rem);
+  /* font-size: clamp(0.875rem, -1.6094rem + 10.7143vw, 1.4375rem); */
+  font-size: clamp(0.875rem, 0.2rem + 5.1429vw, 1.4375rem);
   letter-spacing: 1px;
 }
 
@@ -80,13 +82,13 @@
   width: 100%;
 }
 
-section {
+article {
   background-color: var(--background);
   border: var(--color-text) solid 2px;
   margin-block-end: 52px;
 }
 
-h3 {
+h2 {
   font-variation-settings: var(--font-weight-card-name);
   font-size: 18.2px;
   padding: 5px 0 3px 10px;
