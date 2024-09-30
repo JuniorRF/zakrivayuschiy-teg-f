@@ -130,10 +130,9 @@ img {
 .card-data {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   gap: 25px;
-  padding: 25px 25px 25px;
-  font-size: 19px;
+  padding: 23px 25px 25px;
+  font-size: 18px;
   line-height: 21px;
 }
 
