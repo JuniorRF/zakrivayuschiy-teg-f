@@ -12,16 +12,17 @@
 
 .card__icon-button{
    /* — для кнопки, оборачивающей иконку */
-  margin-block-start: 1px;
   border: none;
+  padding: 0;
+  height: 34px;
   background: transparent;
   transition: outline 0.3s ease;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
+  &:focus {
+    outline: none;
+  }
+
   &:focus-visible {
-    padding-block-start: 3px;
     outline: 2px solid var(--color-text);
   }
 }
