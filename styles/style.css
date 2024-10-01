@@ -1,6 +1,5 @@
 .page {
   max-inline-size: 700px;
-  padding: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,28 +16,30 @@
   background-color: var(--background);
   border: var(--color-text) solid 2px;
   margin-block: 100px;
-  text-align: center;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .title {
   display: block;
-  padding-block-start: 2.1em;
+  margin-block-start: 136px;
   margin-block-end: 20px;
-  font-size: clamp(3.0625rem, 0rem + 14.2857vw, 4.0625rem);
+  font-size: clamp(3.0625rem, 1.9087rem + 4.9231vw, 4.0625rem);
 }
 
 .title-description {
   text-transform: uppercase;
-  font-size: clamp(0.875rem, -1.6094rem + 10.7143vw, 1.4375rem);
-  /* font-size: clamp(0.875rem, 0.2rem + 5.1429vw, 1.4375rem); */
-  letter-spacing: 1px;
+  font-size: clamp(0.875rem, 0.226rem + 2.7692vw, 1.4375rem);
 }
 
 .theme-menu__list {
   margin-block: 23px;
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  align-items: center;
+  gap: 10px;
 }
 
 .theme-menu__button {
@@ -46,6 +47,7 @@
   border: none;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
+  float: right;
 }
 
 .theme-menu__button:hover {
@@ -90,7 +92,7 @@ article {
 
 h2 {
   font-variation-settings: var(--font-weight-card-name);
-  font-size: 18.2px;
+  font-size: 18px;
   padding: 5px 0 3px 10px;
 }
 
@@ -119,7 +121,10 @@ img {
     -1px 1px 0 var(--background), 1px -1px 0 var(--background);
 }
 
-@supports ((text-stroke: 1px var(--background)) or(-webkit-text-stroke: 1px var(--background))) {
+@supports (
+  (-webkit-text-stroke-color: 1px var(--background)) or
+    (-webkit-text-stroke: 1px var(--background))
+) {
   .label-img {
     text-shadow: none;
     -webkit-text-stroke-width: 1px;
@@ -253,8 +258,8 @@ dialog::backdrop {
 }
 
 .filter-invert {
-  filter: invert(.7);
-  transition: .5s linear;
+  filter: invert(0.7);
+  transition: 0.5s linear;
 }
 
 .filter-invert:hover {
@@ -273,16 +278,10 @@ dialog::backdrop {
   filter: invert(1) opacity(80%);
 }
 
-
-
 @media (width <= 375px) {
   .title {
-    margin-block-start: 16px;
-    font-size: 49px;
-  }
-
-  .title-description {
-    letter-spacing: 0;
+    margin-block-start: 120px;
+    margin-block-end: 21px;
   }
 
   .theme-menu__list {
@@ -314,7 +313,7 @@ dialog::backdrop {
     width: 28px;
     height: 28px;
   }
-  
+
   .close {
     width: 257px;
   }
