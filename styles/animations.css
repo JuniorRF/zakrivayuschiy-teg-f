@@ -1,12 +1,12 @@
 @keyframes arrow {
     from {
-        left: 8px;
+        left: -11px;
     }
     50% {
-        left: 4px;
+        left: -15px;
     }
     to {
-        left: 8px;
+        left: -11px;
     }
   }
 

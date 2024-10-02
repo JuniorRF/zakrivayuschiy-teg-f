@@ -16,7 +16,6 @@
   background-color: var(--background);
   border: var(--color-text) solid 2px;
   margin-block: 100px;
-  /* text-align: center; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -35,19 +34,22 @@
 }
 
 .theme-menu__list {
-  margin-block: 23px;
+  margin-block: 25px 22px;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  gap: 8px;
+}
+
+.theme-menu__item {
+  width: 78px;
 }
 
 .theme-menu__button {
+  position: relative;
   background-color: transparent;
   border: none;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
-  float: right;
 }
 
 .theme-menu__button:hover {
@@ -60,9 +62,9 @@
 }
 
 .theme-menu__button:disabled::before {
-  font-family: inherit;
   content: "\25b6";
-  position: relative;
+  position: absolute;
+  left: -30px;
   animation: arrow 1s ease-in-out infinite;
 }
 
@@ -87,7 +89,7 @@
 article {
   background-color: var(--background);
   border: var(--color-text) solid 2px;
-  margin-block-end: 52px;
+  margin-block-end: 50px;
 }
 
 h2 {
@@ -101,8 +103,8 @@ h2 {
 }
 
 img {
-  max-inline-size: 100%;
-  /* height: 700px; */
+  height: clamp(375px, 50vw, 700px);
+  width: 100%;
   object-fit: cover;
   object-position: center;
   border-top: var(--color-text) solid 2px;
@@ -112,7 +114,7 @@ img {
 .label-img {
   position: absolute;
   right: 25px;
-  top: 25px;
+  top: 30px;
   font-family: var(--font-family-alternative);
   font-size: 14px;
   opacity: 0.5;
@@ -135,13 +137,14 @@ img {
 .card-data {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 27px;
   padding: 23px 25px 25px;
   font-size: 18px;
   line-height: 21px;
 }
 
 .buttons {
+  margin-block-start: -2px;
   display: flex;
   gap: 6px;
   align-items: center;
@@ -233,7 +236,7 @@ dialog::backdrop {
   width: 293px;
   height: 38px;
   display: block;
-  margin: auto;
+  margin: 0 auto 20px;
 }
 
 .dialog-text {
@@ -284,10 +287,6 @@ dialog::backdrop {
     margin-block-end: 21px;
   }
 
-  .theme-menu__list {
-    gap: 0.6em;
-  }
-
   h2 {
     width: 351px;
   }
@@ -297,16 +296,16 @@ dialog::backdrop {
     top: 26px;
   }
 
-  .card-data {
-    margin-block-start: -3px;
-    gap: 25px;
-  }
-
   .save-button {
     flex-direction: column;
     gap: 8px;
     width: 306px;
     height: 80px;
+  }
+
+  .dialog-content {
+    margin-inline-start: 24px;
+    gap: 10px;
   }
 
   .floppy {
@@ -319,6 +318,6 @@ dialog::backdrop {
   }
 
   .dialog-text {
-    max-width: 198px;
+    max-width: 206px;
   }
 }
